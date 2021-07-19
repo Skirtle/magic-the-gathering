@@ -13,7 +13,7 @@ protected:
 };
 
 class Creature : public Card {
-private:
+protected:
     // attributes
     int basePower, baseToughness;
     std::vector<std::string> subtypes;
@@ -25,4 +25,17 @@ public:
     void setBasePower(int power);
     void setBaseToughness(int toughness);
     void setSubtypes(std::vector<std::string>);
+};
+
+class Sorcery : public Card
+{
+public:
+    Sorcery();
+    std::string getEffect();
+    short* getManaCost();
+    void setEffect(std::string effect);
+    void setManaCost(short* mana_cost);
+protected:
+    short* mana_cost;
+    std::string effect;
 };
