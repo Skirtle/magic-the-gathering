@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 
-<<<<<<< HEAD
 // Card Class Methods
 std::string Card::getName() { return this->name;}
 std::string Card::getText() { return this->cardText;}
@@ -14,10 +13,6 @@ void Card::setText(std::string text) { this->cardText = text;}
 Castable::Castable() { this->mana_cost = (short*)calloc(6, sizeof(short));}
 short* Castable::getManaCost() { return this->mana_cost;}
 void Castable::setManaCost(short* mana_cost) { this->mana_cost = mana_cost;}
-=======
-std::string Card::getName() { return this->name; }
-void Card::setName(std::string name) { this->name = name; }
->>>>>>> c75ad6659d6784347ea05d4205ef4913680cec8c
 
 // Creature Class Methods
 Creature::Creature() { this->mana_cost = (short*)calloc(6, sizeof(short));}
