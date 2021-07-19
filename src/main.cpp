@@ -1,3 +1,4 @@
+#include "magic.h"
 #include <iostream>
 
 int main(void)
