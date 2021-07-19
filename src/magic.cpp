@@ -3,15 +3,8 @@
 #include <string>
 #include <vector>
 
-std::string Card::getName()
-{
-    return this->name;
-}
-
-void Card::setName(std::string name)
-{
-    this->name = name;
-}
+std::string Card::getName() { return this->name; }
+void Card::setName(std::string name) { this->name = name; }
 
 // Dalton's work
 int Creature::getBasePower() { return base_power; }
