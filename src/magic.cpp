@@ -2,19 +2,12 @@
 #include <iostream>
 #include <string>
 
-// Base card class
-class Card
+std::string Card::getName()
 {
-public:
-    std::string getName()
-    {
-        return this->name;
-    }
+    return this->name;
+}
 
-    void setName(std::string name)
-    {
-        this->name = name;
-    }
-protected:
-    std::string name;
-};
+void Card::setName(std::string name)
+{
+    this->name = name;
+}
