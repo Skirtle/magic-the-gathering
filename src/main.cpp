@@ -1,5 +1,6 @@
 #include "magic.h"
 #include <iostream>
+#include <vector>
 
 int main(void) {
     std::cout << "Program started\n";
@@ -13,9 +14,28 @@ int main(void) {
     testSorcery.setManaCost(mana);
     testSorcery.setText("Search your library for a white card, a blue card, a black card, a red card, and a green card. Reveal those cards, put them into your hand, then shuffle.");
     
-    std::cout << testSorcery.getName() << "\n";
-    std::cout << testSorcery.getManaCost() << "\n";
-    std::cout << testSorcery.getText() << "\n";
+    Creature tiamat = Creature();
+    tiamat.setBasePower(7);
+    tiamat.setBaseToughness(7);
+    short manaTiamat[] = {2, 1, 1, 1, 1, 1};
+    tiamat.setManaCost(manaTiamat);
+    tiamat.setName("Tiamat");
+    std::vector<std::string> tiamatSubtypes;
+    tiamatSubtypes.push_back("Dragon");
+    tiamatSubtypes.push_back("God");
+    tiamat.setSubtypes(tiamatSubtypes);
+    tiamat.setText("Big ol' bawb cat");
+
+    std::cout << tiamat.getBasePower() << std::endl;
+    std::cout << tiamat.getBaseToughness() << std::endl;
+    std::cout << tiamat.getManaCost() << std::endl;
+    std::cout << tiamat.getName() << std::endl;
+    //std::cout << tiamat.getSubtypes() << std::endl;
+    std::cout << tiamat.getText() << std::endl;
+    for (int i = 0; i < 2; i++) {
+        std::cout << tiamat.getSubtypes().at(i) << std::endl;
+    }
+
 
     return 0;
 }
