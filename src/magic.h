@@ -20,7 +20,8 @@ class Castable
 public:
     Castable();
     short* getManaCost();
-    void setManaCost(short* mana_cost); 
+    void setManaCost(short* mana_cost);
+    void printManaCost();
 protected:
     short* mana_cost;
 };

@@ -25,16 +25,20 @@ int main(void) {
     tiamatSubtypes.push_back("God");
     tiamat.setSubtypes(tiamatSubtypes);
     tiamat.setText("Big ol' bawb cat");
+    
+    std::cout << testSorcery.getName() << std::endl;
+    testSorcery.printManaCost();
+    std::cout << testSorcery.getText() << "\n" << std::endl;
 
-    std::cout << tiamat.getBasePower() << std::endl;
-    std::cout << tiamat.getBaseToughness() << std::endl;
-    std::cout << tiamat.getManaCost() << std::endl;
     std::cout << tiamat.getName() << std::endl;
+    tiamat.printManaCost();
     //std::cout << tiamat.getSubtypes() << std::endl;
     std::cout << tiamat.getText() << std::endl;
     for (int i = 0; i < 2; i++) {
         std::cout << tiamat.getSubtypes().at(i) << std::endl;
     }
+    std::cout << tiamat.getBasePower() << std::endl;
+    std::cout << tiamat.getBaseToughness() << std::endl;
 
 
     return 0;
