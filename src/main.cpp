@@ -1,3 +1,5 @@
+// change mana cost to a string, where an XX and red green mana cost would be XXrg
+
 #include "magic.h"
 #include <iostream>
 #include <vector>
