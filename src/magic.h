@@ -15,16 +15,19 @@ protected:
 class Creature : public Card {
 protected:
     // attributes
-    int basePower, baseToughness;
+    int base_power, base_toughness;
     std::vector<std::string> subtypes;
+    short* mana_cost;
 public:
     // methods
     int getBasePower();
     int getBaseToughness();
     std::vector<std::string> getSubtypes();
+    short* getMana();
     void setBasePower(int power);
     void setBaseToughness(int toughness);
     void setSubtypes(std::vector<std::string>);
+    void setManaCost(short* mana_cost);
 };
 
 class Sorcery : public Card
