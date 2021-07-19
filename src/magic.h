@@ -7,12 +7,25 @@ class Card
 {
 public:
     std::string getName();
+    std::string getText();
     void setName(std::string name);
+    void setText(std::string text);
 protected:
     std::string name;
+    std::string cardText;
 };
 
-class Creature : public Card {
+class Castable
+{
+public:
+    Castable();
+    short* getManaCost();
+    void setManaCost(short* mana_cost); 
+protected:
+    short* mana_cost;
+};
+
+class Creature : public Card, public Castable {
 protected:
     // attributes
     int base_power, base_toughness;
@@ -20,25 +33,17 @@ protected:
     short* mana_cost;
 public:
     // methods
+    Creature();
     int getBasePower();
     int getBaseToughness();
     std::vector<std::string> getSubtypes();
-    short* getMana();
     void setBasePower(int power);
     void setBaseToughness(int toughness);
     void setSubtypes(std::vector<std::string>);
-    void setManaCost(short* mana_cost);
 };
 
-class Sorcery : public Card
+class Sorcery : public Card, public Castable
 {
 public:
-    Sorcery();
-    std::string getEffect();
-    short* getManaCost();
-    void setEffect(std::string effect);
-    void setManaCost(short* mana_cost);
 protected:
-    short* mana_cost;
-    std::string effect;
 };
