@@ -6,24 +6,25 @@
 class Card
 {
 public:
+    bool isLegendary();
     std::string getName();
     std::string getText();
     void setName(std::string name);
     void setText(std::string text);
+    void setLegendary(bool status);
 protected:
     std::string name;
     std::string cardText;
+    bool legendary;
 };
 
 class Castable
 {
 public:
-    Castable();
-    short* getManaCost();
-    void setManaCost(short* mana_cost);
-    void printManaCost();
+    std::string getManaCost();
+    void setManaCost(std::string mana_cost);
 protected:
-    short* mana_cost;
+    std::string mana_cost;
 };
 
 class Creature : public Card, public Castable {
@@ -43,8 +44,6 @@ public:
     void setSubtypes(std::vector<std::string>);
 };
 
-class Sorcery : public Card, public Castable
-{
-public:
-protected:
-};
+class Sorcery : public Card, public Castable {};
+
+class Instant : public Card, public Castable {};
