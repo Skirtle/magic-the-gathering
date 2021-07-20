@@ -48,7 +48,7 @@ class Sorcery : public Card, public Castable {};
 
 class Instant : public Card, public Castable {};
 
-class Plansewalker : public Card, public Castable {
+class Planeswalker : public Card, public Castable {
 private:
     int loyality;
 public:
