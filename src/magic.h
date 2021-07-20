@@ -48,6 +48,11 @@ class Sorcery : public Card, public Castable {};
 
 class Instant : public Card, public Castable {};
 
-class Plankswalker : public Card, public Castable {
-
+class Plansewalker : public Card, public Castable {
+private:
+    int loyality;
+public:
+    int getLoyalty();
+    void addLoyalty(int dx);
+    void setLoyalty(int loyalty);
 };
