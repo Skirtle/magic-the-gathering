@@ -51,7 +51,6 @@ int main(void) {
 
     std::cout << tiamat.getName() << std::endl;
     std::cout << conflux.getManaCost() << std::endl;
-    //std::cout << tiamat.getSubtypes() << std::endl;
     for (int i = 0; i < 2; i++) {
         std::cout << tiamat.getSubtypes().at(i) << " ";
     }
