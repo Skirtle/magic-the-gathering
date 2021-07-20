@@ -32,7 +32,18 @@ int main(void) {
 
     Land sengir = Land();
     sengir.setName("Castle Sengir");
-    sengir.setText("{T}: Add C.\n1, {T}: Add B.\n2, {T}: Add U or R.");
+    sengir.setText("Tap: Add C.\n1, Tap: Add B.\n2, Tap: Add U or R.");
+
+    Artifact solring = Artifact();
+    solring.setName("Sol Ring");
+    solring.setManaCost("1");
+    solring.setText("Tap: Add CC.");
+
+    Enchantment prismatic = Enchantment();
+    prismatic.setName("The Prismatic Bridge");
+    prismatic.setManaCost("WUBRG");
+    prismatic.setLegendary(true);
+    prismatic.setText("At the beginning of your upkeep, reveal cards from the top of your library until you reveal a creature or planeswalker card. Put that card onto the battlefield and the rest on the bottom of your library in a random order.");
     
     std::cout << conflux.getName() << std::endl;
     std::cout << conflux.getManaCost() << std::endl;
@@ -55,6 +66,14 @@ int main(void) {
 
     std::cout << sengir.getName() << std::endl;
     std::cout << sengir.getText() << "\n" << std::endl;
+
+    std::cout << solring.getName() << std::endl;
+    std::cout << solring.getManaCost() << std::endl;
+    std::cout << solring.getText() << "\n" << std::endl;
+
+    std::cout << prismatic.getName() << std::endl;
+    std::cout << prismatic.getManaCost() << std::endl;
+    std::cout << prismatic.getText() << "\n" << std::endl;
 
     return 0;
 }

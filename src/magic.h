@@ -44,10 +44,6 @@ public:
     void setSubtypes(std::vector<std::string>);
 };
 
-class Sorcery : public Card, public Castable {};
-
-class Instant : public Card, public Castable {};
-
 class Planeswalker : public Card, public Castable {
 private:
     int loyalty;
@@ -59,5 +55,13 @@ public:
     void setLoyalty(int loyalty);
     // TODO add abilities
 };
+
+class Artifact : public Card, public Castable {};
+
+class Enchantment : public Card, public Castable {}; 
+
+class Sorcery : public Card, public Castable {};
+
+class Instant : public Card, public Castable {};
 
 class Land : public Card {};
