@@ -29,6 +29,10 @@ int main(void) {
     redsun.setName("Red Sun's Zenith");
     redsun.setManaCost("XR");
     redsun.setText("Red Sun's Zenith deals X damage to any target. If a creature dealt damage this way would die this turn, exile it instead. Shuffle Red Sun's Zenith into its owner's library.");
+
+    Land sengir = Land();
+    sengir.setName("Castle Sengir");
+    sengir.setText("{T}: Add C.\n1, {T}: Add B.\n2, {T}: Add U or R.");
     
     std::cout << conflux.getName() << std::endl;
     std::cout << conflux.getManaCost() << std::endl;
@@ -49,6 +53,8 @@ int main(void) {
     std::cout << redsun.getManaCost() << std::endl;
     std::cout << redsun.getText() << "\n" << std::endl;
 
+    std::cout << sengir.getName() << std::endl;
+    std::cout << sengir.getText() << "\n" << std::endl;
 
     return 0;
 }

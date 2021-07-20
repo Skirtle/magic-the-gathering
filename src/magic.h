@@ -59,3 +59,5 @@ public:
     void setLoyalty(int loyalty);
     // TODO add abilities
 };
+
+class Land : public Card {};
