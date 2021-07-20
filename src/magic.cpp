@@ -30,3 +30,8 @@ Planeswalker::Planeswalker(int startingLoyalty) {this->loyalty = startingLoyalty
 int Planeswalker::getLoyalty() {return this->loyalty; }
 void Planeswalker::addLoyalty(int dx) {this->loyalty += dx; }
 void Planeswalker::setLoyalty(int loyalty) {this->loyalty = loyalty; }
+
+// Player class methods
+void Player::setLives(int lives) {this->lives = lives; }
+void Player::addLives(int dx) {this->lives += dx; }
+int Player::getLives() {return this->lives; }

@@ -65,3 +65,12 @@ class Sorcery : public Card, public Castable {};
 class Instant : public Card, public Castable {};
 
 class Land : public Card {};
+
+class Player {
+protected:
+    int lives;
+public:
+    void setLives(int lives);
+    void addLives(int dx);
+    int getLives();
+};
