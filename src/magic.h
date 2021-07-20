@@ -47,3 +47,7 @@ public:
 class Sorcery : public Card, public Castable {};
 
 class Instant : public Card, public Castable {};
+
+class Plankswalker : public Card, public Castable {
+
+};
