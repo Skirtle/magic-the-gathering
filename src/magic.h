@@ -74,3 +74,15 @@ public:
     void addLives(int dx);
     int getLives();
 };
+
+class Game {
+    // we can use a circular linked list to denote which players turn it is, and the order
+    // head is the first player. tail is the last player
+    // after the tail comes the head, it makes sense.
+};
+
+template<class T>
+class Node {
+    Node<T> next;
+    T data;
+};
