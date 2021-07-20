@@ -50,7 +50,7 @@ class Instant : public Card, public Castable {};
 
 class Planeswalker : public Card, public Castable {
 private:
-    int loyality;
+    int loyalty;
 public:
     int getLoyalty();
     void addLoyalty(int dx);
