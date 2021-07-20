@@ -52,7 +52,10 @@ class Planeswalker : public Card, public Castable {
 private:
     int loyalty;
 public:
+    Planeswalker();
+    Planeswalker(int startingLoyalty);
     int getLoyalty();
     void addLoyalty(int dx);
     void setLoyalty(int loyalty);
+    // TODO add abilities
 };

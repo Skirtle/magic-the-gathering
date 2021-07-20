@@ -23,3 +23,10 @@ std::vector<std::string> Creature::getSubtypes() { return subtypes; }
 void Creature::setBasePower(int power) { this->base_power = power; }
 void Creature::setBaseToughness(int toughness) { this->base_toughness = toughness; }
 void Creature::setSubtypes(std::vector<std::string> subtypes) {this->subtypes = subtypes; }
+
+// Planeswalker Class Methods
+Planeswalker::Planeswalker() {this->loyalty = -1; }
+Planeswalker::Planeswalker(int startingLoyalty) {this->loyalty = startingLoyalty; }
+int Planeswalker::getLoyalty() {return this->loyalty; }
+void Planeswalker::addLoyalty(int dx) {this->loyalty += dx; }
+void Planeswalker::setLoyalty(int loyalty) {this->loyalty = loyalty; }
