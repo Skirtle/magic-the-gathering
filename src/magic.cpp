@@ -35,4 +35,35 @@ void Planeswalker::setLoyalty(int loyalty) {this->loyalty = loyalty; }
 void Player::setLives(int lives) {this->lives = lives; }
 void Player::addLives(int dx) {this->lives += dx; }
 int Player::getLives() {return this->lives; }
+Player::Player() { this->setLives(-1); }
+Player::Player(int lives) { this->setLives(lives); }
 
+// Node struct methods
+Node::Node() {
+    this->next = nullptr;
+    this->data = Player(-1);
+    this->alive = NULL;
+}
+Node::Node(Player data) {
+    this->next = nullptr;
+    this->data = data;
+    this->alive = 1;
+}
+Node::Node(Player data, Player *next) {
+    this->next = next;
+    this->data = data;
+    this->alive = 1;
+}
+
+// Linked List class methods
+LinkedList::LinkedList() {
+    this->head = Node();
+    this->tail = this->head;
+}
+LinkedList::LinkedList(Player player) {
+    this->head = Node(player);
+    this->tail = this->head;
+}
+void LinkedList::add(Node newNode) {
+    // :)
+}

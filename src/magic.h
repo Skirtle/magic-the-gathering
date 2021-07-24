@@ -3,8 +3,7 @@
 #include <string>
 #include <vector>
 
-class Card
-{
+class Card {
 public:
     bool isLegendary();
     std::string getName();
@@ -18,8 +17,7 @@ protected:
     bool legendary;
 };
 
-class Castable
-{
+class Castable {
 public:
     std::string getManaCost();
     void setManaCost(std::string mana_cost);
@@ -73,6 +71,8 @@ public:
     void setLives(int lives);
     void addLives(int dx);
     int getLives();
+    Player();
+    Player(int lives);
 };
 
 class Game {
@@ -81,8 +81,20 @@ class Game {
     // after the tail comes the head, it makes sense.
 };
 
-template<class T>
-class Node {
-    Node<T> next;
-    T data;
+struct Node {
+    Player* next;
+    Player data;
+    int alive;
+    Node();
+    Node(Player data);
+    Node(Player data, Player *next);
+};
+
+class LinkedList {
+private:
+    Node head, tail;
+public:
+    LinkedList();
+    LinkedList(Player player);
+    void add(Node newNode);
 };
